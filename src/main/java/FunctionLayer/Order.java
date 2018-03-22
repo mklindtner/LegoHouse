@@ -1,15 +1,27 @@
 package FunctionLayer;
 
+import FunctionLayer.LegoCalculator.BrickList;
+import FunctionLayer.LegoCalculator.LegoPieces;
+
+import java.time.LocalDateTime;
+
 public class Order
 {
 	private int height, width, length, id, userId; //set id explicity in orderMapper
-	private String typeOrder; //is this stupid?
+	private BrickList brickList;
+	private final LocalDateTime localDateTime;
 
 	public Order(int height, int width, int length, int userId) {
 		this.height = height;
 		this.width = width;
 		this.length = length;
 		this.userId = userId;
+		localDateTime = LocalDateTime.now();
+	}
+
+	public Order(int height, int width, int length, int userId, int id) {
+		this(height, width, length, userId);
+		this.id = id;
 	}
 
 	/*
@@ -63,13 +75,18 @@ public class Order
 		this.id = id;
 	}
 
-	public String getTypeOrder()
+	public BrickList getBrickList()
 	{
-		return this.typeOrder;
+		return this.brickList;
 	}
 
-	public void setTypeOrder(String typeOrder)
+	public void setBrickList(BrickList brickList)
 	{
-		this.typeOrder = typeOrder;
+		this.brickList = brickList;
+	}
+
+	public LocalDateTime getLocalDateTime()
+	{
+		return this.localDateTime;
 	}
 }

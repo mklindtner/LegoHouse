@@ -5,6 +5,7 @@
  */
 package PresentationLayer;
 
+import FunctionLayer.ApplicationException;
 import FunctionLayer.LoginSampleException;
 import FunctionLayer.OrderSampleException;
 
@@ -37,8 +38,8 @@ public class FrontController extends HttpServlet {
             Command action = Command.from( request );
             String view = action.execute( request, response );
             request.getRequestDispatcher( "/WEB-INF/" + view + ".jsp" ).forward( request, response );
-        } catch ( LoginSampleException | OrderSampleException ex) {
-            request.setAttribute( "error", ex.getMessage() );
+        } catch ( ApplicationException ap) {
+            request.setAttribute( "error", ap.getMessage() );
             request.getRequestDispatcher( "index.jsp" ).forward( request, response );
         }
     }
@@ -68,7 +69,8 @@ public class FrontController extends HttpServlet {
      */
     @Override
     protected void doPost( HttpServletRequest request, HttpServletResponse response )
-            throws ServletException, IOException {
+            throws ServletException, IOException
+    {
         processRequest( request, response );
     }
 

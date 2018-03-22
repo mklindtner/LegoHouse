@@ -1,5 +1,6 @@
 package PresentationLayer;
 
+import FunctionLayer.ApplicationException;
 import FunctionLayer.LoginSampleException;
 import FunctionLayer.OrderSampleException;
 
@@ -18,6 +19,7 @@ abstract class Command {
 		commands.put( "delegate", new Delegate() );
 		commands.put( "createOrder", new CreateOrder() );
 		commands.put( "displayOrder", new DisplayOrder() );
+		commands.put( "specificOrderPage", new LegoBricks() );
     }
 
     static Command from( HttpServletRequest request ) {
@@ -29,6 +31,6 @@ abstract class Command {
     }
 
     abstract String execute( HttpServletRequest request, HttpServletResponse response ) 
-            throws LoginSampleException, OrderSampleException;
+            throws ApplicationException;
 
 }

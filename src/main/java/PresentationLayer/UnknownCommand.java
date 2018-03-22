@@ -1,5 +1,6 @@
 package PresentationLayer;
 
+import FunctionLayer.ApplicationException;
 import FunctionLayer.LoginSampleException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,9 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 public class UnknownCommand extends Command {
 
     @Override
-    String execute( HttpServletRequest request, HttpServletResponse response ) throws LoginSampleException {
-        String msg = "Unknown command. Contact IT";
-        throw new LoginSampleException( msg );
+    String execute( HttpServletRequest request, HttpServletResponse response ) throws ApplicationException {
+        throw new ApplicationException(new LoginSampleException("Unknown command. Contact IT"));
     }
 
 }

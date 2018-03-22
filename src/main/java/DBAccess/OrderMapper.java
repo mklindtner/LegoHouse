@@ -42,12 +42,33 @@ public class OrderMapper
 				int width = rs.getInt("width");
 				int height = rs.getInt("height");
 				int userId = rs.getInt("users_id");
-				Order order = new Order(length, width, height, userId);
+				int id = rs.getInt("idorders");
+				Order order = new Order(length, width, height, userId, id);
 				orders.add(order);
 			}
 			return orders;
 		}catch(SQLException | ClassNotFoundException ex) {
 			throw new OrderSampleException( ex.getMessage() );
+		}
+	}
+
+	public static Order getOrder(int orderId) throws OrderSampleException {
+		try {
+			Connection con = Connector.connection();
+			String SQL = "Select * FROM orders WHERE idOrders=?";
+			PreparedStatement ps = con.prepareStatement(SQL);
+			ps.setInt(1, orderId);
+			ResultSet rs = ps.executeQuery();
+			rs.next();
+			int length = rs.getInt("length");
+			int width = rs.getInt("width");
+			int height = rs.getInt("height");
+			int userId = rs.getInt("users_id");
+			int id = rs.getInt("idorders");
+			Order order = new Order(length, width, height, userId, id);
+			return order;
+		} catch(SQLException | ClassNotFoundException ex) {
+			throw new OrderSampleException( ex. getMessage() );
 		}
 	}
 }

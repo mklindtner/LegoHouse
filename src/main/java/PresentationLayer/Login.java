@@ -1,5 +1,6 @@
 package PresentationLayer;
 
+import FunctionLayer.ApplicationException;
 import FunctionLayer.LogicFacade;
 import FunctionLayer.LoginSampleException;
 import FunctionLayer.User;
@@ -15,14 +16,20 @@ import javax.servlet.http.HttpSession;
 public class Login extends Command {
 
     @Override
-    String execute( HttpServletRequest request, HttpServletResponse response ) throws LoginSampleException {
-        String email = request.getParameter( "email" );
-        String password = request.getParameter( "password" );
-        User user = LogicFacade.login( email, password );
-        HttpSession session = request.getSession();
-        session.setAttribute( "user", user );
-        session.setAttribute( "role", user.getRole() );
-        return user.getRole() + "page";
+    String execute( HttpServletRequest request, HttpServletResponse response ) throws ApplicationException
+	{
+		try {
+			String      email    = request.getParameter("email");
+			String      password = request.getParameter("password");
+			User        user     = LogicFacade.login(email, password);
+			HttpSession session  = request.getSession();
+			session.setAttribute("user", user);
+			session.setAttribute("role", user.getRole());
+			session.setAttribute("email", user.getEmail());
+			return user.getRole() + "page";
+		} catch(LoginSampleException ex) {
+			throw new ApplicationException(ex);
+		}
     }
 
 }

@@ -2,6 +2,7 @@ package FunctionLayer;
 
 import DBAccess.OrderMapper;
 import DBAccess.UserMapper;
+import FunctionLayer.LegoCalculator.LegoPieces;
 
 import java.io.PrintWriter;
 import java.util.List;
@@ -31,6 +32,12 @@ public class LogicFacade {
 	public static List<Order> showOrder() throws OrderSampleException {
     	return OrderMapper.displayOrders();
 	}
+
+	public static Order getOrderFromId(int id) throws OrderSampleException {
+    	return OrderMapper.getOrder(id);
+	}
+
+
 
 
 }

@@ -1,9 +1,6 @@
 package PresentationLayer;
 
-import FunctionLayer.LogicFacade;
-import FunctionLayer.LoginSampleException;
-import FunctionLayer.OrderSampleException;
-import FunctionLayer.User;
+import FunctionLayer.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,10 +8,14 @@ import javax.servlet.http.HttpSession;
 
 public class DisplayOrder extends Command
 {
-	@Override String execute(HttpServletRequest request, HttpServletResponse response) throws OrderSampleException
+	@Override String execute(HttpServletRequest request, HttpServletResponse response) throws ApplicationException
 	{
-		HttpSession session = request.getSession();
-		session.setAttribute("orders", LogicFacade.showOrder() );
-		return "orderpage"; //should this be more generic?
+		try {
+			HttpSession session = request.getSession();
+			session.setAttribute("orders", LogicFacade.showOrder() );
+			return "orderpage"; //should this be more generic?
+		}catch(OrderSampleException ose) {
+			throw new ApplicationException(ose);
+		}
 	}
 }
