@@ -16,11 +16,11 @@
     <%
         User u = (User) session.getAttribute("user");
         List orders = (List) session.getAttribute("orders");
-        out.print("<b> your orders </b>");
+        out.print("<b> orders </b>");
         for(int i = 0; i < orders.size(); i++) {
             Order order = (Order) orders.get(i);
             if(u.getRole().equalsIgnoreCase("employee")) {
-                out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "userId: " + order.getUserId() + "</a>" + "<br />");
+                out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "userId: " + order.getUserId() + ", orderId: " + order.getId() + "</a>" + "<br />");
 
             } else {
                 if(u.getId() == order.getUserId() ) {
@@ -41,8 +41,8 @@
 
 
     <form name="sendDate" action="FrontController" method="post">
-        <input type="hidden" name="command" value="sendDate">
-        <input type="number" name="orderId" value="24">
+        <input type="hidden" name="command" value="sendDate">submit when order is shipped
+        <input type="number" name="orderId" value="">orderId
         <input type="submit" value="submit">
     </form>
     <a href="FrontController?command=delegate&page=customerpage">testLink</a> <!-- fix this to general-->

@@ -81,7 +81,7 @@ public class FrontController extends HttpServlet {
      */
     @Override
     public String getServletInfo() {
-        return "Short description";
+        return "Passes seesion on to the command class";
     }// </editor-fold>
 
 }
