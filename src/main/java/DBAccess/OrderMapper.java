@@ -3,8 +3,11 @@ package DBAccess;
 import FunctionLayer.LoginSampleException;
 import FunctionLayer.Order;
 import FunctionLayer.OrderSampleException;
+import FunctionLayer.PresentationFacade;
 
+import javax.ejb.Local;
 import java.sql.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +70,19 @@ public class OrderMapper
 			int id = rs.getInt("idorders");
 			Order order = new Order(length, width, height, userId, id);
 			return order;
+		} catch(SQLException | ClassNotFoundException ex) {
+			throw new OrderSampleException( ex. getMessage() );
+		}
+	}
+
+	public static void addSendTime(Order order, LocalDateTime localDateTime) throws OrderSampleException {
+		try {
+			Connection con = Connector.connection();
+			String sql = "Update orders SET order_send=? WHERE idorders=?";
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, localDateTime.toString() );
+			ps.setInt(2, order.getId() );
+			ps.executeUpdate();
 		} catch(SQLException | ClassNotFoundException ex) {
 			throw new OrderSampleException( ex. getMessage() );
 		}

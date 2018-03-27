@@ -39,7 +39,7 @@ public class FrontController extends HttpServlet {
             String view = action.execute( request, response );
             request.getRequestDispatcher( "/WEB-INF/" + view + ".jsp" ).forward( request, response );
         } catch ( ApplicationException ap) {
-            request.setAttribute( "error", ap.getMessage() );
+            request.setAttribute( "error", ap.getCause().getMessage() );
             request.getRequestDispatcher( "index.jsp" ).forward( request, response );
         }
     }

@@ -17,7 +17,7 @@ public class CreateOrder extends Command
 			if (length == 0 || width == 0 || height == 0 || user == null)
 				throw new OrderSampleException("a side cannot be 0");
 			LogicFacade.createOrder(length, width, height, user.getId());
-			return user.getRole() + "page"; //use order.getTypeOrder()?
+			return user.getRole() + "page";
 		} catch(OrderSampleException ose) {
 			throw new ApplicationException(ose);
 		}

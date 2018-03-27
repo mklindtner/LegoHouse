@@ -22,5 +22,8 @@
             out.println("long bricks: " + lp.getNumberOfLongBrik() + ", mediumBricks: " + lp.getNumberOfMediumBrick() + ", smallBricks: " + lp.getNumberOfSmallBrick() + "<br />");
             //out.println("length: " + choosenOrder.getHeight() + ", width: " + choosenOrder.getWidth() + ", height: " + choosenOrder.getHeight());
         %>
+        <form name="sendDate" action="FrontController" method="post">
+            
+        </form>
 </body>
 </html>

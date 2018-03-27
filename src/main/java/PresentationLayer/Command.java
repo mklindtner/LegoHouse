@@ -20,6 +20,7 @@ abstract class Command {
 		commands.put( "createOrder", new CreateOrder() );
 		commands.put( "displayOrder", new DisplayOrder() );
 		commands.put( "specificOrderPage", new LegoBricks() );
+		commands.put( "sendDate", new OrderTime() );
     }
 
     static Command from( HttpServletRequest request ) {

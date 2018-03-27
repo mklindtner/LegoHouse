@@ -5,6 +5,7 @@ import DBAccess.UserMapper;
 import FunctionLayer.LegoCalculator.LegoPieces;
 
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -35,6 +36,10 @@ public class LogicFacade {
 
 	public static Order getOrderFromId(int id) throws OrderSampleException {
     	return OrderMapper.getOrder(id);
+	}
+
+	public static void addSendDate(Order order, LocalDateTime localDateTime) throws OrderSampleException {
+    	OrderMapper.addSendTime(order, localDateTime);
 	}
 
 

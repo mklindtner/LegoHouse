@@ -9,14 +9,13 @@ public class Order
 {
 	private int height, width, length, id, userId; //set id explicity in orderMapper
 	private BrickList brickList;
-	private final LocalDateTime localDateTime;
+	private LocalDateTime localDateTime;
 
 	public Order(int height, int width, int length, int userId) {
 		this.height = height;
 		this.width = width;
 		this.length = length;
 		this.userId = userId;
-		localDateTime = LocalDateTime.now();
 	}
 
 	public Order(int height, int width, int length, int userId, int id) {

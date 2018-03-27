@@ -12,9 +12,12 @@ public class DisplayOrder extends Command
 	{
 		try {
 			HttpSession session = request.getSession();
+			User u = (User) session.getAttribute("user");
+			if(u == null)
+				throw new LoginSampleException("no user detected");
 			session.setAttribute("orders", LogicFacade.showOrder() );
 			return "orderpage"; //should this be more generic?
-		}catch(OrderSampleException ose) {
+		}catch(OrderSampleException | LoginSampleException ose) {
 			throw new ApplicationException(ose);
 		}
 	}

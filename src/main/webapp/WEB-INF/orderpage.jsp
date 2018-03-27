@@ -19,20 +19,17 @@
         out.print("<b> your orders </b>");
         for(int i = 0; i < orders.size(); i++) {
             Order order = (Order) orders.get(i);
-            out.println("order id is: " + order.getId() );
-            out.println("<br />");
             if(u.getRole().equalsIgnoreCase("employee")) {
-                //out.println(order.getLength() + ", Width: " + order.getWidth() + ", Height: " + order.getHeight() + ", Id: " + order.getUserId() + "<br />");
+                out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "userId: " + order.getUserId() + "</a>" + "<br />");
             } else {
                 if(u.getId() == order.getUserId() ) {
-                	//out.println("<a href=\"FrontController?command=delegate&page=specificOrderPage\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "<br />" + "</a>");
-                   // out.println("length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "<br />");
+                	out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "</a>" + "<br />");
                 }
             }
         }
     %>
-   <a href="FrontController?command=specificOrderPage&orderId=10">showOrder</a>
-
+    <!-- <a href="FrontController?command=specificOrderPage&orderId=22">showOrder</a> -->
+    <!-- add form for button here -->
     <form name="createOrder" action="FrontController" method="POST">
         <input type="hidden" name="command" value="createOrder">
         <input type="number" name="length" value="">length
