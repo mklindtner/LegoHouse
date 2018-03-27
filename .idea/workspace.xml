@@ -7,17 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97d01004-fe43-480a-be58-df4cecaf8f98" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/PresentationLayer/OrderTime.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DBAccess/OrderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/DBAccess/OrderMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FunctionLayer/LogicFacade.java" afterPath="$PROJECT_DIR$/src/main/java/FunctionLayer/LogicFacade.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FunctionLayer/Order.java" afterPath="$PROJECT_DIR$/src/main/java/FunctionLayer/Order.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PresentationLayer/Command.java" afterPath="$PROJECT_DIR$/src/main/java/PresentationLayer/Command.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PresentationLayer/CreateOrder.java" afterPath="$PROJECT_DIR$/src/main/java/PresentationLayer/CreateOrder.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PresentationLayer/DisplayOrder.java" afterPath="$PROJECT_DIR$/src/main/java/PresentationLayer/DisplayOrder.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PresentationLayer/FrontController.java" afterPath="$PROJECT_DIR$/src/main/java/PresentationLayer/FrontController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PresentationLayer/OrderTime.java" afterPath="$PROJECT_DIR$/src/main/java/PresentationLayer/OrderTime.java" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/orderpage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/orderpage.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/specificOrderPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/specificOrderPage.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,28 +44,8 @@
       <file leaf-file-name="CreateOrder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/CreateOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
+            <state relative-caret-position="336">
               <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customerpage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/customerpage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employeepage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/employeepage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="15" column="63" lean-forward="false" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -80,38 +54,18 @@
       <file leaf-file-name="OrderTime.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/OrderTime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+            <state relative-caret-position="392">
+              <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DisplayOrder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DisplayOrder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/DisplayOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="392">
               <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="specificOrderPage.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/specificOrderPage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -120,8 +74,8 @@
       <file leaf-file-name="orderpage.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/orderpage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="22" column="270" lean-forward="false" selection-start-line="22" selection-start-column="270" selection-end-line="22" selection-end-column="270" />
+            <state relative-caret-position="378">
+              <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -133,21 +87,6 @@
             <state relative-caret-position="368">
               <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DBAccess/OrderMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="84" column="31" lean-forward="false" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
-              <folding>
-                <marker date="1521862485008" expanded="true" signature="504:576" ph="INSERT INTO Orders... " />
-                <marker date="1521862485008" expanded="true" signature="1234:1254" ph="Select * FRO... orders" />
-                <marker date="1521862485008" expanded="true" signature="1924:1961" ph="Select * FRO... orders" />
-                <marker date="1521862485008" expanded="true" signature="2647:2694" ph="Update orders... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -191,7 +130,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/displayorders.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/employeepage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/customerpage.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/FunctionLayer/ApplicationException.java" />
         <option value="$PROJECT_DIR$/src/main/java/PresentationLayer/Login.java" />
@@ -209,10 +147,11 @@
         <option value="$PROJECT_DIR$/src/main/java/DBAccess/OrderMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/FunctionLayer/LogicFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/PresentationLayer/CreateOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PresentationLayer/OrderTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/PresentationLayer/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/orderpage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/specificOrderPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/orderpage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/PresentationLayer/OrderTime.java" />
       </list>
     </option>
   </component>
@@ -576,12 +515,12 @@
       <option name="presentableId" value="Default" />
       <updated>1520883419035</updated>
       <workItem from="1520883421467" duration="3111000" />
-      <workItem from="1521539267595" duration="77374000" />
+      <workItem from="1521539267595" duration="79369000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80485000" />
+    <option name="totallyTimeSpent" value="82480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -761,14 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="20" column="74" lean-forward="true" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/sql/Connection.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -846,14 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/LegoBricks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FunctionLayer/PresentationFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -882,14 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/FrontController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -923,14 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/DisplayOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FunctionLayer/LogicFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-203">
@@ -955,18 +862,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/CreateOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/LegoBricks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="252">
+          <caret line="15" column="104" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="104" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/OrderTime.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/specificOrderPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        <state relative-caret-position="252">
+          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="22" column="74" lean-forward="false" selection-start-line="22" selection-start-column="74" selection-end-line="22" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/FrontController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -979,18 +902,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/orderpage.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/CreateOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="22" column="270" lean-forward="false" selection-start-line="22" selection-start-column="270" selection-end-line="22" selection-end-column="270" />
+        <state relative-caret-position="336">
+          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/specificOrderPage.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/orderpage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="25" column="12" lean-forward="false" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/OrderTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PresentationLayer/DisplayOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
           <folding />
         </state>
       </provider>

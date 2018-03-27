@@ -21,6 +21,7 @@
             Order order = (Order) orders.get(i);
             if(u.getRole().equalsIgnoreCase("employee")) {
                 out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "userId: " + order.getUserId() + "</a>" + "<br />");
+
             } else {
                 if(u.getId() == order.getUserId() ) {
                 	out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "</a>" + "<br />");
@@ -35,6 +36,13 @@
         <input type="number" name="length" value="">length
         <input type="number" name="width" value="">width
         <input type="number" name="height" value="">height
+        <input type="submit" value="submit">
+    </form>
+
+
+    <form name="sendDate" action="FrontController" method="post">
+        <input type="hidden" name="command" value="sendDate">
+        <input type="number" name="orderId" value="24">
         <input type="submit" value="submit">
     </form>
     <a href="FrontController?command=delegate&page=customerpage">testLink</a> <!-- fix this to general-->

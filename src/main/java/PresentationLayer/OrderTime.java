@@ -16,8 +16,9 @@ public class OrderTime extends Command
 	{
 		try {
 			HttpSession session = request.getSession();
-			LogicFacade.addSendDate((Order) session.getAttribute("order"), LocalDateTime.now());
-			return "orderpage";
+			Order order = LogicFacade.getOrderFromId(Integer.parseInt(request.getParameter("orderId")));
+			LogicFacade.addSendDate(order, LocalDateTime.now());
+			return "employeepage";
 		} catch (OrderSampleException ex) {
 			throw new ApplicationException(ex);
 		}
