@@ -41,11 +41,13 @@
 
 
     <form name="sendDate" action="FrontController" method="post">
-        <input type="hidden" name="command" value="sendDate">submit when order is shipped
-        <input type="number" name="orderId" value="">orderId
+        <input type="hidden" name="command" value="sendDate">
+        <input type="number" name="orderId" value="">submit orderId when order is shipped
         <input type="submit" value="submit">
     </form>
-    <a href="FrontController?command=delegate&page=customerpage">testLink</a> <!-- fix this to general-->
+    <%
+        out.println("<a href=\"FrontController?command=delegate&page=" + u.getRole() + "page" + "\">" + "go to index </a>");
+    %>
 
 
 </body>
