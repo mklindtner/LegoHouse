@@ -19,16 +19,20 @@
         out.print("<b> orders </b>");
         for(int i = 0; i < orders.size(); i++) {
             Order order = (Order) orders.get(i);
-            if(u.getRole().equalsIgnoreCase("employee")) {
-                out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "userId: " + order.getUserId() + ", orderId: " + order.getId() + "</a>" + "<br />");
+            if(order.getLocalDateTime() == null) {
+                if(u.getRole().equalsIgnoreCase("employee")) {
+                    out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "userId: " + order.getUserId() + ", orderId: " + order.getId() + "</a>" + "<br />");
 
-            } else {
-                if(u.getId() == order.getUserId() ) {
-                	out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "</a>" + "<br />");
+                } else {
+                    if(u.getId() == order.getUserId() ) {
+                        out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "</a>" + "<br />");
+                    }
                 }
             }
         }
     %>
+
+
     <!-- <a href="FrontController?command=specificOrderPage&orderId=22">showOrder</a> -->
     <!-- add form for button here -->
     <form name="createOrder" action="FrontController" method="POST">
@@ -39,13 +43,28 @@
         <input type="submit" value="submit">
     </form>
 
-
     <form name="sendDate" action="FrontController" method="post">
         <input type="hidden" name="command" value="sendDate">
         <input type="number" name="orderId" value="">submit orderId when order is shipped
         <input type="submit" value="submit">
     </form>
+
+
     <%
+        out.print("<b> orders send </b>");
+        for(int i = 0; i < orders.size(); i++) {
+        	Order order = (Order) orders.get(i);
+        	if(order.getLocalDateTime() != null) {
+                if(u.getRole().equalsIgnoreCase("employee")) {
+                    out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "userId: " + order.getUserId() + ", orderId: " + order.getId() + "</a>" + "<br />");
+                } else {
+                    if(u.getId() == order.getUserId() ) {
+                        out.println(" <a href=\"FrontController?command=specificOrderPage&orderId=" + order.getId() + "\">" + "length: " + order.getLength() + ", Width: " + order.getWidth() +", Height: " + order.getHeight() + "</a>" + "<br />");
+                    }
+                }
+            }
+        }
+        out.print("<br />");
         out.println("<a href=\"FrontController?command=delegate&page=" + u.getRole() + "page" + "\">" + "go to index </a>");
     %>
 

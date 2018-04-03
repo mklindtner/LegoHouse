@@ -8,6 +8,7 @@ import FunctionLayer.PresentationFacade;
 import javax.ejb.Local;
 import java.sql.*;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,8 +47,17 @@ public class OrderMapper
 				int height = rs.getInt("height");
 				int userId = rs.getInt("users_id");
 				int id = rs.getInt("idorders");
-				Order order = new Order(length, width, height, userId, id);
-				orders.add(order);
+				String ld = rs.getString("order_send");
+				if( !(ld == null) ) {
+					DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+					LocalDateTime ldt = LocalDateTime.parse(ld, dtf);
+					Order order = new Order(length, width, height, userId, id, ldt);
+					orders.add(order);
+				} else {
+					Order order = new Order(length, width, height, userId, id);
+					orders.add(order);
+
+				} //LocalDatTime ldt = LocalDateTime.parse(rs.getString("order_send");
 			}
 			return orders;
 		}catch(SQLException | ClassNotFoundException ex) {
@@ -87,4 +97,5 @@ public class OrderMapper
 			throw new OrderSampleException( ex. getMessage() );
 		}
 	}
+
 }

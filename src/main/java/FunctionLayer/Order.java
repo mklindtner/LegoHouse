@@ -23,6 +23,11 @@ public class Order
 		this.id = id;
 	}
 
+	public Order(int height, int width, int length, int userId, int id, LocalDateTime ld) {
+		this(height, width, length, userId, id);
+		localDateTime = ld;
+	}
+
 	/*
 	public Order(int height, int width, int length) {
 		this.height = height;
@@ -87,5 +92,10 @@ public class Order
 	public LocalDateTime getLocalDateTime()
 	{
 		return this.localDateTime;
+	}
+
+	public void setLocalDateTime(LocalDateTime localDateTime)
+	{
+		this.localDateTime = localDateTime;
 	}
 }
